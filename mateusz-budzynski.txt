@@ -1,3 +1,5 @@
-2020.10.17 PRZYKLAD
-Drogi pamietniczku na dzisiejszy zajeciach nauczylem/lam sie, ze:
-- ...
+2020.10.17 
+Drogi pamietniczku na dzisiejszy zajeciach nauczylem/lam sie:
+- wrzucać pliki na githuba
+- poznałem zawartość wszystkich folderów na linuxie
+- 
