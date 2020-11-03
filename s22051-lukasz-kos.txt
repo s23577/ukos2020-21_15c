@@ -1,0 +1,12 @@
+16-17.X.2020
+First lessons (lecture and workshop).
+* Tried to learn Git, in particular commands like: init, clone, add, commit, status, branch, checkout, merge, fetch, rebase, revert, reset, pull, push, remote. 
+Still needs practice, recalling all the details isn't effective. 
+* Still need to learn and understands git commands like 'git gc'. 
+* Try to finish learngitbranching.js 
+* Try to learn linux terminal commands from lecture presentation. Still half to go.
+* Prepare for another workshop about changing access permission of a file on linux
+* Still need to learn linux topography of the filesystem, especially main directories
+
+7-8.XI.2020
+*
