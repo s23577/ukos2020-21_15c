@@ -1,0 +1,3 @@
+2020-11-07:
+I realised i forgot to make a homework last time, but now i'm fixing it.
+On the upside, i've finished a course recommendation on https://learngitbranching.js.org/ and i loved it.
