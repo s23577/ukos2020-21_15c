@@ -1,0 +1,16 @@
+1.  Włączam System Tools -> LXTerminal
+2.  ls
+3.  pwd
+4.  cd Desktop
+5.  pwd
+6.  ls
+7.  tak - graficznie mam identyczne pliki
+8.  ls ../
+9.  cd ../Pictures
+10. pwd
+11. Nie przeszłam do żadnego katalodu
+12. cd ../home
+13. cd /root  - Permission denied
+14. ctrl+alt+F1 przełącza system do terminala tekstowego tty1
+    ctrl+F7 przełącza w tryb graficzny
+
