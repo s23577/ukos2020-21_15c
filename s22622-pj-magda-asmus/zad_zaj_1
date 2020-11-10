@@ -14,3 +14,20 @@
 14. ctrl+alt+F1 przełącza system do terminala tekstowego tty1
     ctrl+F7 przełącza w tryb graficzny
 
+DRUGA CZEŚĆ ZADAŃ
+
+mkdir ukos
+mkdir ukos/katalog ukos/klamka
+mkdir ukos/katalog/katalog2 ukos/katalog/katalog3
+cd ukos/klamka
+touch zajecia2.txt zajecia2.log inny.txt nowy.txt
+cd ../
+mkdir -p to/jest/długa/nazwa 
+cd to/jest/długa/nazwa
+touch dane.txt
+cd ~/ukos/klamka
+rm *[.txt]
+cd ../katalog
+rmdir katalog2
+rm ../klamka/*
+rmdir ../klamka
