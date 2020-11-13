@@ -1,0 +1,15 @@
+
+1.
+Za pomoca mkdir oraz tauch stworzyłam strukturę katalogów i plików.
+Przy pomocy chmod z różnymi parametrami( u=wrx,g=rx; 777, u+r,g-w ) zmodyfikowałam uprawnienia. 
+Współpracując z koleżanka stworzyłyśmy sobie wzajemie pliki tekstowe (sprawdzajac uprzednio uprawnienia ). 
+Próbujac usunąc plik stworzony w moim katalogu przez koleżanke zaobserwowałam ze w tym wypadku to ona jest userem gdyz stworzyła ten plik - nie ja - mimo ze plik jest w moim katalogu.
+2.
+Uzywając chmod 000 "sciezka bezwzgledna" usunełam wszelkie prawa dostepu w bierzacym katalogu.
+W zwiazku z tym nie moge do niego ponownie wejsc, odczyttac ani zmienic zawartości.
+Nastepnie ustawiłam chmod 777 "sciezka bezwzgledna bierzacego katalogu " + uzyłam chmod 000 "sciezka bezwzgledna katalogu nadrzednego".
+W tym przypadku nie moge wrócic do home używajac sciezki względnej (moge uzywajac bezwzględnej) NASTEPNIE nie jestem w stanie wejsc do katalogu o uprawnieniach 777 przy pomocy sciezki wzglednej ani bezwzględnej. moge natomiast zmienic uprawnienia tak by stało się to możliwe.
+3.
+Zadanie to pokazało ze wybrany plik tekstowy moze nam posłuzyc za komunikator. Plik ten musi mies odpowiednie uprawnienia dla grupy (r+w).W takim wypadku po zastosowaniu komendy 'watch ls -la komunikator.txt' konsola wyswietla nam wprowadzane do pliku zmiany. Gdy zmiany takie jak np 'echo "cześć" >>kamunikator.txt' wykona ktos z naszej grupy sa one automatycznie wyswietlane w konsoli. 
+4. 
+Utworzyłam katalog public_html i umiescilam w nim plik tekstowy strona.html. Podczas próby wyświetlenia strony okazało się ze automatycznie ustawiane uprawnienia sa niewystarczające i nalezy ustawic wszystkim +rx (np a+rx).

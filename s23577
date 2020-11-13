@@ -1,0 +1,6 @@
+Dear Diary, 01.11.2020
+at first weekend at university I learnt:
+- bash and how to use it with command: pwd, cd, ls, cat, mkdir, rm,
+- vim and how to use it, how to insert text: "i", save file: esc ":wq" or how to quit vim: esc ":q",
+- git: what is git, how to create my own repositiy, how to commit and pull request
+- virtual machine: I set up it and checked if it works.
