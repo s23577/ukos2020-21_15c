@@ -1,1 +1,15 @@
-//todo
+Utworzylem u siebie strukture katalogów katalog1/plikiTekstowe/tekstowyPlik z domyslnymi prawami dostepu
+w tekstowymPliku dodalem tekst za pomocą echo "tekst" >> tekstowyPlik
+utworzylem tez katalog2/jaja i nadalem prawa dostepu dla siebie i grupy poleceniem chmod 770 katalog2/jaja zeby inne osoby z grupy mogly stworzyc u mnie kukulcze jajo
+nastepnie poleceniem cd /home/PJWSTK/s22622/ oraz ls -l sprawdzilem do których plików u innej osoby z grupy mam prawa.
+zauwazylem, ze jest katalog do którego mam pelne prawa rwx wiec wszedlem w ten katalog poleceniem cd katalog i utworzylem w nim swoje "jajo" poleceniem touch jajo i dodalem do niego tekst za pomocą echo "tekst" >> jajo
+wróciłem do swojego katalogu domowego, włączyłem drugą konsolę i na jednym uzylem polecenia tail -f tekstowyPlik a drugą konsolą dodałem tekst za pomocą echo "tekst" >> tekstowyPlik
+na konsoli z poleceniem tail zobaczyłem wpisany tekst do pliku praktycznie natychmiast.
+utworzylem katalog public_html poleceniem mkdir public_html i stworzylem w nim plik strona.html poleceniem nano public_html/strona.html 
+zmienilem prawa do katalogu public_html, pliku strona.html oraz do katalogu domowego zeby strona byla widoczna w przegladarce
+poleceniem w3m http://szuflandia.pjwstk.edu.pl/~s22868/strona.html oraz na swoim komputerze w przegladarce sprawdzilem, ze strona wyswietla sie prawidlowo.
+kiedy zabralem prawo r (read) na stronie internetowej dostalem komunikat Forbidden You dont have permission to acces strona.html on this server.
+po przywroceniu prawa r dla others poleceniem chmod o+r strona byla znowu widoczna na przegladarce.
+utworzylem nowy plik test1 sprawdzilem ze jego prawa dostepu to rwx r-x r-x
+poleceniem umask zmienilem prawa dostepu na 777 i nowy utworzony plik test2 po polecenieu umask mial prawa rwx rwx rwx
+wrocilem umask do domyslnej opcji bo nadawanie nowym plikom wszystkich praw dostepu moze skonczyc sie zle.
