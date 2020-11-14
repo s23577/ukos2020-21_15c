@@ -24,4 +24,4 @@ bash: ./././././././: Is a directory
 12. ubuntu@bss-ubu1804:~/Pictures$ cd /home/ubuntu/
 13. cd/root
 bash: cd/root: No such file or directory
-14.ctrl+alt+(f1-f6) => zmienia sie na sys. graficzny 
+14.ctrl+alt+(f1-f6) => zmienia na tryb tekstowy
