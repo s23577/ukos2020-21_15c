@@ -1,0 +1,8 @@
+1. Utworzyłam w swoim katalogu domowym strukturę podkatalogów i plików tekstowych i ustawiłam dla katalogu prawo dostępu dla siebie a dla reszty możliwość wejścia i zapoznania się z zawrtością tylko za pomocą komendy chmod 755 katalog, katalog2 jest dostepny dla wszystkich, łącznie z możliwością wprowadzania zmian
+w katalogu koleżanki utworzyłam plik tekstowy, ona w moim też, udało mi się go usunąć
+2. wszystkie prawa dostępu w bieżącym katalogu usunęłam komendą chmod 000, dzięki temu nikt w tym ja nie mogę już do niego wejść ani nic zmienić czy odczytać
+usuwając prawa dostepu do katalogu nadrzędnego nie jesteśmy w stanie wrócić do niego ścieżką względną
+
+3. Za pomocą echo "tekst" >> nazwapliku.txt wpisaliśmy tekst do pliku tekstowego
+
+4 Należy zmienić ustawienia komendą chmod a=rwx

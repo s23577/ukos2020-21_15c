@@ -1,0 +1,15 @@
+Użyłam komendy:
+-ls do wyświetlenia zawartości kataolu
+-pwd aby sprawdzić gdzie jestem
+-cd aby wejść do katalogu
+-ls ~ aby wyswietlić zawartośc kataolgu domowego
+-wpisałam cd../Pictures/ aby przejsc z pulpitu do obrazow, za pomoca sciezki wzglednej
+-wpisałam cd ~ aby przejść do katalogu domowego za pomocą ścieżki bezwzględnej
+-skrót ctrl+alt+f1 przełącza na pierwszy niegraficzny terminal, powrót alt+F7
+
+-za pomocą komend mkdir i cd stworzyłam podane w zadaniu drzewo
+-za pomocą komendy touch podane pliki
+-katalog ukos/to/jest/dluga/nazwa stworzyłam komendą mkdir -p to/jest/dluga/nazwa
+-pliki tekstowe usunęłam poleceniem rm *.txt
+-katalog możemy usunąć poleceniem rm
+-cały katalog z zawartością usunęłam poleceniem rm -r katalog
