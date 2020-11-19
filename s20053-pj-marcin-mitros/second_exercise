@@ -1,0 +1,65 @@
+komentarze stanowią odpowiedz na zadania
+1. 
+s20053@szuflandia:~$ pwd
+/home/PJWSTK/s20053 =>
+mkdir test => 
+cd test =>
+mkdir -p test2/test3 =>
+chmod g+w test => 
+#w katalogu test jest tworzony prze kolege plik tescik.txt =>
+# nie moge usunac pliku tescik.txt (osoba tworzaca moze)
+
+2. 
+pwd
+/home/PJWSTK/s20053/test/test2/test3  =>
+chmod 000 ..  
+#usuwam wszystkie uprawnienia do kat. nadrzednego =>
+cd ../.. 
+-shell: cd: ../..: Brak dostępu   =>
+cd ..
+-shell: cd: ..: Brak dostępu
+#brak dostępu do kat. nadrzednego =>
+cd ~/test => 
+pwd
+/home/PJWSTK/s20053/test  =>
+cd test2/test3
+-shell: cd: test2/test3: Brak dostępu
+#nie moge powrocic do katalogu test3 poniewaz nie mam dostepu do test2 =>
+chmod u+x test2
+#mogę wejsc do katalogu ale jego zawartosc jest ukryta, moge tez przejśc do test3 =>
+chmod u=w test2 
+#po tej komendzie nie moge wejsc do kat alni zobaczyc jego zawartości =>
+chmod u+x test2
+#d-wx------  3 s20053 pjwstk 4096 lis 15 08:09 test2 =>
+touch test2/plik 
+#moge wejsc do kat, moge zapisac plik, nie moge zobaczyc jego zarartosci
+
+
+
+
+3.
+/home/PJWSTK/s20053/test =>
+touch tescik.txt =>
+chmor g+w tescik.txt 
+#plikowi tescik.txt nadejemy uprawienia =>
+echo "hej" >> tescik.txt =>
+tail -f tescik.txt    
+#pokazuje na bierząco podglad pliku, gdy ktos z grópy cos dopisał =>
+hej
+no hej 
+
+#fajny paten swoją drogą ;)
+
+4.
+mkdir public_html =>
+cd public_html =>
+vim moja_pierwsza_strona.html
+#przepisuje z zadania tresc strony =>
+http://szuflandia.pjwstk.edu.pl/~s20053/
+!!!!
+#minimalne ustawienia uprawnień aby strona normalnie odpala się w firefox -
+-minimalne uprawnienia kat
+d------r-x    2 s20053 pjwstk  4096 lis 15 10:35 public_html
+
+-minimalne uprawnienia pliku
+-------r-- 1 s20053 pjwstk   68 lis 15 10:25 moja_pierwsza_strona.html

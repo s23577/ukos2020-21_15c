@@ -1,0 +1,17 @@
+16-17.X.2020
+First lessons (lecture and workshop).
+* Tried to learn Git, in particular commands like: init, clone, add, commit, status, branch, checkout, merge, fetch, rebase, revert, reset, pull, push, remote. 
+Still needs practice, recalling all the details isn't effective. 
+* Still need to learn and understands git commands like 'git gc'. 
+* Try to finish learngitbranching.js 
+* Try to learn linux terminal commands from lecture presentation. Still half to go.
+* Prepare for another workshop about changing access permission of a file on linux
+* Still need to learn linux topography of the filesystem, especially main directories
+
+7-8.XI.2020
+* Pliki utworzone przeze mnie w cudzym katalogu sa moja wlasnoscia i vice versa. Jesli wiec odpowiednio przypisze uprawnienia (np. 744) to wlasciciel maszyny nie bedzie w stanie usunac mojego pliku
+* Jesli najpierw usuniemy wszelkie prawa dostepu do katalogu biezacego to nie bedziemy w stanie zmienic uprawnien katalogu nadrzednego z tej pozycji. Trzeba najpierw przejsc (cd) wyzej.
+* Jesli w strukturze katalogow ABC/XYZ, ABC zostanie pozbawione uprawnieniado wykonywania to nie bedzie mozna przejsc do katalogu XYZ.
+* Operator > w poleceniu echo zapisuje tresc calego komunikatu jako plik, natomiast operator >> powoduje, ze tresc komunikatu zostaje zapisana w pliku w nowej linii, bez usuwania poprzedniej zawartosci pliku.
+* Minimalne uprawnienie, ktore pozwoli na zobaczenie strony internetowej dla katalogu domowego, folderu public_html oraz pliku .html to uprawnienia do odczytu i wykonania dla pozostalych osob (005).
+* Podczas tworzenia nowego pliku wartosc standardowa dostepu (777 dla katalogu i 666 dla pliku) jest ograniczana przez maske, ktora wywolujemy komenda umask. Wartosc uprawnienia pliku jest koniunkcja logiczna (AND) binarnej wartosci domyslnej i negacji maski (rowniez w postaci binarnej).

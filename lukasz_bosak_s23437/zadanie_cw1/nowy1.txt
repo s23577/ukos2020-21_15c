@@ -1,0 +1,162 @@
+       Zadania ćw1:
+
+1.uruchom terminal.
+
+2.Wyświetl zawartość aktualnego katalogu
+
+wyświetlam zawartość kat komędą ls -l
+
+3. Sprawdz gdzie aktualnie sie znajdujesz. porównaj to z tym co mozesz zobaczyc w interfejsie graficznym:
+
+za pomocą komendy pwd wyświetlam gdzie aktualnie się znajduje./home/ubuntu
+
+4. przejdz do kataogu pulpit za pomoca scieżki względnej.
+
+cd Desktop
+
+5.Sprawdz gdzie jestes.
+
+/home/ubuntu/Desktop
+
+6.wyświetl zawartośc bierzącego katalogu.
+
+ubuntu@bss-ubu1804:~/Desktop$ ls -l
+total 32
+-r--r--r-- 1 root   root   1265 Aug 25  2019 adding-packages-permanently-info.txt
+drwxrwxr-x 2 ubuntu ubuntu 4096 Nov 13 15:25 domowa
+-r--r--r-- 1 root   root    457 Aug 25  2019 passwords-info.txt
+drwxrwxr-x 2 ubuntu ubuntu 4096 Nov 13 15:25 praca
+drwxrwxr-x 3 ubuntu ubuntu 4096 Nov 13 15:27 praca_domowa
+drwxrwxr-x 5 ubuntu ubuntu 4096 Nov  7 10:57 repo
+drwxrwxr-x 3 ubuntu ubuntu 4096 Nov  5 18:41 repo1
+drwxrwxr-x 4 ubuntu ubuntu 4096 Nov  5 15:41 ukos
+
+7.Zobacz, czy przechodząc do tego katalogu w sposób graficzny otzrymamy to samo?
+
+tak
+
+8.Wyświetl zawartość swojego katalogu domowego bez przechodzenia do niego (ls z odpowiednim parametrem)
+
+ubuntu@bss-ubu1804:~/Desktop$ cd ~/Pictures
+ubuntu@bss-ubu1804:~/Pictures$ ls ~  <-- uzylem ls z parametrem ~ aby wyświtlic zawartośc katalogu domowego.
+Desktop    Downloads  Music  Pictures  public_html  Templates
+Documents  lukasz     nowy   Public    repo         Videos
+ubuntu@bss-ubu1804:~/Pictures$ cd ~
+
+9. Przejdz do katalogu obrazy za pomocą scieżki względnej
+
+ubuntu@bss-ubu1804:~/Desktop$ cd ~/Pictures
+ubuntu@bss-ubu1804:~/Pictures$
+10. Sprawdz gdzie jestes.
+
+ubuntu@bss-ubu1804:~/Pictures$ pwd
+/home/ubuntu/Pictures
+ubuntu@bss-ubu1804:~/Pictures$
+
+11. zobacz do jakiego katalogu przejdziesz za pomoca ścieżki ././././././
+
+ubuntu@bss-ubu1804:~/Pictures$ cd ././././././
+ubuntu@bss-ubu1804:~/Pictures$
+pozostalem w tym samym katalogu
+
+12. Przejdz do swojego katalogu za pomoca ścieżki bezwglęgnej.
+ubuntu@bss-ubu1804:~/Pictures$ cd /home
+ubuntu@bss-ubu1804:/home$
+
+13. Zobacz co sie stanie jak wpiszesz komende cd/root.
+
+ubuntu@bss-ubu1804:/home$ cd /root
+bash: cd: /root: Permission denied
+- nie mam dostępu.
+14. CO sie stanie jak wcisniesz ctrl+alt+f1.
+
+przechodzi do trybu tekstowego aby wyjsc klikamy ctrl+f7
+
+druga częśc zadań.
+
+1.
+
+ubuntu@bss-ubu1804:~/Desktop$ mkdir ukos
+ubuntu@bss-ubu1804:~/Desktop$ cd ukos/
+ubuntu@bss-ubu1804:~/Desktop/ukos$ mkdir katalog klamka
+ubuntu@bss-ubu1804:~/Desktop/ukos$ cd katalog
+
+ubuntu@bss-ubu1804:~/Desktop/ukos/katalog$ mkdir katalog2 katalog3
+ubuntu@bss-ubu1804:~/Desktop$ tree
+── ukos
+    ├── katalog
+    │   ├── katalog2
+    │   └── katalog3
+    └── klamka
+
+
+2.
+ ubuntu@bss-ubu1804:~/Desktop$ cd ukos/klamka
+ubuntu@bss-ubu1804:~/Desktop/ukos/klamka$ touch zajecia2.txt
+ubuntu@bss-ubu1804:~/Desktop/ukos/klamka$ touch zajecia2.log
+ubuntu@bss-ubu1804:~/Desktop/ukos/klamka$ touch inny.txt
+ubuntu@bss-ubu1804:~/Desktop/ukos/klamka$ touch nowy.txt
+ubuntu@bss-ubu1804:~/Desktop/ukos/klamka$ ls -l
+total 0
+-rw-rw-r-- 1 ubuntu ubuntu 0 Nov 13 16:51 inny.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Nov 13 16:52 nowy.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Nov 13 16:51 zajecia2.log
+-rw-rw-r-- 1 ubuntu ubuntu 0 Nov 13 16:51 zajecia2.txt
+ubuntu@bss-ubu1804:~/Desktop/ukos/klamka$
+
+- add ( aby zrobic to jedna komenda: touch zajecia2.txt zajecia2.log inny.txt nowy.txt )
+
+
+3.
+ubuntu@bss-ubu1804:~/Desktop/ukos/klamka$ cd ../
+ubuntu@bss-ubu1804:~/Desktop/ukos$ mkdir -p ukos/to/jest/dluga/nazwa
+ubuntu@bss-ubu1804:~/Desktop/ukos$ ls _l
+ls: cannot access '_l': No such file or directory
+ubuntu@bss-ubu1804:~/Desktop/ukos$ tree
+.
+├── katalog
+│   ├── katalog2
+│   └── katalog3
+├── klamka
+│   ├── inny.txt
+│   ├── nowy.txt
+│   ├── zajecia2.log
+│   └── zajecia2.txt
+└── ukos
+    └── to
+        └── jest
+            └── dluga
+                └── nazwa
+
+9 directories, 4 files
+
+4.
+
+ubuntu@bss-ubu1804:~/Desktop/ukos$ cd ukos/to/jest/dluga/nazwa
+ubuntu@bss-ubu1804:~/Desktop/ukos/ukos/to/jest/dluga/nazwa$ touch dane.txt
+ubuntu@bss-ubu1804:~/Desktop/ukos/ukos/to/jest/dluga/nazwa$ ls
+dane.txt
+ubuntu@bss-ubu1804:~/Desktop/ukos/ukos/to/jest/dluga/nazwa$
+
+5.
+
+ubuntu@bss-ubu1804:~/Desktop/ukos$ cd klamka
+ubuntu@bss-ubu1804:~/Desktop/ukos/klamka$ ls -l
+total 0
+-rw-rw-r-- 1 ubuntu ubuntu 0 Nov 13 16:51 inny.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Nov 13 16:52 nowy.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Nov 13 16:51 zajecia2.log
+-rw-rw-r-- 1 ubuntu ubuntu 0 Nov 13 16:51 zajecia2.txt
+ubuntu@bss-ubu1804:~/Desktop/ukos/klamka$ rm *[.txt]
+ubuntu@bss-ubu1804:~/Desktop/ukos/klamka$ ls -l
+total 0
+-rw-rw-r-- 1 ubuntu ubuntu 0 Nov 13 16:51 zajecia2.log
+ubuntu@bss-ubu1804:~/Desktop/ukos/klamka$
+
+6.
+
+ubuntu@bss-ubu1804:~/Desktop/ukos/katalog$ rmdir katalog2
+ubuntu@bss-ubu1804:~/Desktop/ukos/katalog$ tree
+.
+└── katalog3
+
