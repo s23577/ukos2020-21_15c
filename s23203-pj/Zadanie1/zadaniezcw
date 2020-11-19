@@ -1,0 +1,33 @@
+REQUEST 1
+
+>>> Run System Tools > LXTerminal
+>>> command ls
+>>> command pwd
+>>> command cd Desktop
+>>> command pwd
+>>> its the same
+>>> command ls../
+>>> command cd ../Pictures
+>>> command pwd
+>>> Something its no YES ! ! ! >>> i did not go to any directory
+>>> command cd ../home
+>>> command cd /root - premission danied
+>>> CTRL + ALT + F1 - switch to the first console
+
+REQUEST 2
+
+>>> mkdir ukos
+>>> mkdir ukos/katalog ukos/klamka
+>>> mkdir ukos/katalog/katalog2 ukos/katalog/katalog3
+>>> cd ukos/klamka
+>>> touch zajecia2.txt zajecia2.log inny.txt nowy.txt
+>>> cd../
+>>> mkdir -p to/jest/dluga/nazwa
+>>> cd to/jest/dluga/nazwa
+>>> touch dane.txt
+>>> cd~/ukos/klamka
+>>> rm *[.txt]
+>>> cd ../katalog
+>>> rmdir katalog2
+>>> rm ../klamka/*
+>>> rmdir ../klamka
