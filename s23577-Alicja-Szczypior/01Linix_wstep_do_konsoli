@@ -1,0 +1,23 @@
+2020.11.11
+---------------
+01 szuflandia
+---------------
+1.
+-I learnt commands: pwd, cd, cd .., ls, ls -a, ls ../Users, 
+-How to use relative path and absolute path,
+-cd/root - it lead to root and I had no permission to go there,
+-Ctrl+Alt+F1 it shows text terminal and alt+F7 switched to graphic window.
+
+2.
+bash-5.0$ date&&tree ukos
+czw 29 paź 20:36:00 2020 CET
+ukos
+├── katalog
+│   └── katalog3
+└── to
+    └── jest
+        └── dluga
+            └── nazwa
+                └── dane.txt
+
+6 directories, 1 file
