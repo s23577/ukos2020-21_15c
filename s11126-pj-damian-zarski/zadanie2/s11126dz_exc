@@ -1,0 +1,6 @@
+2020.11.13
+Utworzone wczesniej katalogi i pliki nadalem im konkretnych uprawnien dla uzytkownikow i grup (np U+x, G-w)
+Przy zadaniu utworzenia 'kukulczego jaja' zaobserwowac mozna, ze plik utworzony w moim katalogu przez sasiada posiadal informacje o jego indeksie (ID uzytkownika)
+Przy pomocy chmod 000 .. zmienilem uprawnienia dla katalogu nadrzednego przez co zabralem mozliwosc przejscia do katalogu kat2 z tmp w normalny sposob, jednak poki nie opuscilem katalogu bierzacego (kat2) moglem w nim wszystko robic
+W utworzonym pliku tekstowym dzieki komendzie 'echo "tresc" >> nazwa_pliku' umieszczamy nasz tekst, a komenda 'tail -f nazwa_pliku' pozwala nam na podglad na zywo i tekstowa komunikacje z innym uzytkownikiem
+
