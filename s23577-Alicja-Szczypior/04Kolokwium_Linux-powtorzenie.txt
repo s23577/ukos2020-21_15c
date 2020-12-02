@@ -1,0 +1,129 @@
+2020.12.02
+--------------------------------
+04 Kolokwium Linux - powtorzenie
+--------------------------------
+
+1.
+mkdir -p - enables to create tree of directories using one command
+e.g.
+mkdir -p kot/ma/ale/a/ala/ma/kota
+
+absolute/bezwzgledna: 
+cd /tmp/ukos04/kot/ma/ale
+
+relative/wzgledna: 
+cd ~
+cd /tmp/
+cd ukos04
+cd kot
+cd ma
+cd ale
+
+2.
+mkdir -p ../../../kot/ma/ale/jan/kowalski
+
+├── ala
+│   ├── i
+│   │   └── as
+│   └── ma
+│       └── kota
+├── drzewo.txt
+└── kot
+    └── ma
+        └── ale
+            └── jan
+                └── kowalski
+
+3.
+moving "ale" to "i" from "kota"
+mv ../../../kot/ma/ale ../../i
+
+├── ala
+│   ├── i
+│   │   ├── ale
+│   │   │   └── jan
+│   │   │       └── kowalski
+│   │   └── as
+│   └── ma
+│       └── kota
+├── drzewo.txt
+└── kot
+    └── ma
+4.
+How to close program with no answer and no reaction to ctrl+c?
+
+a) ps to check PID of program
+   kill PID
+
+b) ps aux | grep [process name]
+   kill [process ID]
+
+c) if there isn't process ID
+   pkill [process name]
+   or
+   to find process ID
+   pgrep [process name]
+   pkill [process ID]
+
+d) if kill or pkill doesn't work
+   killall [process name]
+   BUT WE SHOULD USE THIS COMMAND ONLY WHEN WE REALLY NEED!
+
+5.
+show all files/directories which names start from "al" in current directory
+e.g.
+ls -a | grep al
+
+6.
+Permissions for ala :
+everyone can go (x) into the directory, only group can display (r) content, user has all permissions (rwx)
+
+e.g.
+a)	chmod u+rwx,g+r,o+rx ala
+	result:
+	-rwxr--r-x  4 ala  wheel  128  2 gru 21:24 ala
+	-rw-r--r--  1 ala  wheel  272  2 gru 21:47 drzewo.txt
+	-rw-r--r--  1 ala  wheel  327  2 gru 21:57 drzewo2.txt
+	drwxr-xr-x  3 ala  wheel   96  2 gru 21:25 kot
+
+		we can see also:
+		basic permissions for files:		-rw-r--r--  or	chmod 644
+		basic permissions for direciories: 	drwxr-xr-x  or  chmod 755
+
+b)	chmod u=rwx,g=r,o=rx ala
+	result:
+	drwxr--r-x  4 ala  wheel  128  2 gru 21:24 ala
+
+c)	octal notation
+	chmod 745 ala
+	result:
+	drwxr--r-x  4 ala  wheel  128  2 gru 21:24 ala
+
+7.
+Creating file with list of files in current directory:
+e.g.
+ala@MacBook-Pro-Alicja ukos04 % 	ls -a | grep .txt > list_of_files_in_ukos04
+ala@MacBook-Pro-Alicja ukos04 % 	cat list_of_files_in_ukos04
+					drzewo.txt
+					drzewo2.txt
+
+8.
+I can't create any file on my university account. What happend?
+- root changed permisions for user like dr-xr-xr-x
+- someone changed permissions for me like dr-xr-xr-x ( I am not sure)
+
+9.
+tab - enables to type faster the commands
+
+10.
+How to run the program without blocking the terminal:
+a) using bg %[number of job]
+   e.g.
+   [name of program]
+   ctrl+z
+   job
+   bg %1
+b) [name of program] &
+
+
+

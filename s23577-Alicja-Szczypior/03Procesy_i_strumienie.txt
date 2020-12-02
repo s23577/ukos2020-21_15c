@@ -1,0 +1,120 @@
+2020.11.23
+---------------
+03 Procesy i strumienie - szuflandia
+---------------
+
+ls -a -usefull command to show all files and directiories (including the hidden ones)
+
+grep -command which enables to show files/directiories containing letter or letters in files/directories names we want to display, e.g. ls -a | grep D 
+
+"|" - pipe (polish: "potok") - allows you to use at least two commands in one command, it allows you to list the data quickly among a directory containing a large amount of others files/directiories
+
+">" - Greater Than Sign - it allows to overwrite file/directory (if file/directory already exists - ">" overwrite, if there is no one such file/directory - ">" create new).
+
+ls -a | grep D > ListaPlikowZLiterkaD.txt - this command creates new file with list of files/directiories cointaining in name letter "D". Below I have presented the result below:
+	ala@MacBook-Pro-Alicja ~ % cat ListaPlikowZLiterkaD.txt
+ 	.DS_Store
+ 	Desktop
+ 	Documents
+ 	Downloads
+ 	ListaPlikowZLiterkaD.txt
+
+inne:
+	find / -maxdepth 2 > nazwapliku.txt - only stdout in file nazwapliku.txt
+	find / -maxdepth 2 > nazwapliku.txt 2>&1 - stdout and stderr in file nazwapliku.txt
+	find / -maxdepth 2 2> nazwapliku.txt - only errors in file nazwapliku.txt
+
+1. ps command display list of active processes
+- ps: displays information about a selection of the active processes opened form bash;
+  PID - Process ID, TTY - TeleTYpe (e.g. pts/0) 
+  using ctr+alt+F1 I can transfer form graphic mode to text mode, 
+  using alt+(form F1 to F6) I can switch shells e.g. TTY1, TTY2, TTY6 - more than one person can work on one c  computer from different place
+  if I use alt+F7 it renturn to graphic mode
+  TIME
+  CMD - command
+- ps a: to see every process on system not only mine, it shows all processes which have its own TTY
+- ps -a: Select all processes except both session leaders and processes not associated with a terminal (it removes shell form list) 
+- ps x: to see every process on system without TTY
+- ps aux: to see every process on the system using BSD syntax (e.g. root's and mine)
+ps -aux is distinct from ps aux!!!
+- ps -aux print all processes owned by a user named x, as well as printing all processes that would be selected by the -a option. If the user named x does not exist, this ps may interpret the command as ps aux instead and print a warning.
+
+- ps auxf - shows tree of processes (parent and child)
+
+- sign "?" in TTY column means that program is not assigned to any TTY (those are usually "demons" - programs which are working in backgroud).
+
+- all bash processes: ps aux | grep bash
+- all root processes: ps aux | grep root
+
+
+2. PID - process identificator - user can use PID to perform operations e.g. kill
+kill - enables to stop process, to use kill command: kill PID (it send a signal to a process)
+
+I used ps to show actual processes, gedit PID was 936, I tried to kill 936, but gedit was unresponsive - I tried with SIGKILL: kill -9 936  - I shut down gedit.
+
+killall (name of process)
+killall shell - no process found
+I opened three windows of mozilla firefox,
+killall firefox - closed all windows.
+
+There is one important thing.
+If I open process by terminal and then I use ctrl+Z I can't kill this process, I have to use kill -9 (PID).
+
+kill doesn't work for any process, e.g. doesnt work on root processes, because I am not root
+
+
+3. ctrl+C - closes active program in terminal 
+e.g.
+	ala@MacBook-Pro-Alicja repos % cat
+ 	^C
+I opened new text program and I closed this process.
+
+ctrl+D - told the shell that you weren't going to type any more commands, so it exited; then the terminal exited because its subprogram had terminated.
+It doesn't send the end signal, it just closes the input stream
+
+	ala@MacBook-Pro-Alicja repos % cat > wynik1.txt
+ 	witaj^C
+ 	ala@MacBook-Pro-Alicja repos % cat wynik1.txt
+ 	ala@MacBook-Pro-Alicja repos %"
+
+	ala@MacBook-Pro-Alicja repos % cat >wynik2.txt
+ 	witaj%                                                                          
+	ala@MacBook-Pro-Alicja repos % cat wynik2.txt
+ 	witaj% (double ctrl+D)                                                          
+	ala@MacBook-Pro-Alicja repos %"
+
+ctrl+D - enables safe ending of process with saving changes
+
+
+4. ctrl + Z - stop the program (but the cursor must be active in terminal),
+the program is in memory, but doesn't run, it is in background.
+
+jobs - shows running programs in the background
+
+bg - to run stopped process in background - but the stopped job will remain still in the background (we can use bg %1)
+
+fg - to move job on first plan, we can now close the job/program (fg %1)
+
+programname & - enables to run the program in background, I can use console and programm, without & I can't use console, I have to use (ctrl+Z for e. g.)
+
+_______________________________
+great website: chest.sh
+
+tar - enables extract or create archive:
+
+tar -xvf /path/to/foo.tar - to extract
+e.g.
+tar -xvf Desktop/Pictures.tar existingfilr/directory
+
+tar -cvf /path/to/foo.tar /path/to/foo/ - to create
+e.g.
+tar -cvf Desktop/Pictures.tar existingfile/directory
+
+wget - enables to dowmload file or site form web, enables to save on disk
+e.g.
+wget website_name
+wget https://google.com
+
+
+
+
