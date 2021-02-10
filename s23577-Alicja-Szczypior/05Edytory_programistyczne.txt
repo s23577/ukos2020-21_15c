@@ -1,0 +1,54 @@
+2020.02.10.
+----------------------------
+04 Edytory programistyczne
+----------------------------
+1.
+I leant a little bit about Linux and its licenses: BSD, Apache, GNU/GPL, LGPL.
+
+2.
+I learnt how to use vim on previous lessons.
+We have also: nano, vi and mcedit which we can open from console.
+The others that opens in window: geany, gedit, jedit, atom.io, sublime text
+
+3.
+Text editors are different. For examle they have an option to line out a specific expression to facilitate work with text.
+
+nano:
+enter - text is moving one line down
+space - first line is moving right
+backspace - first line is movig left (it depends in what line is cursor)
+left bracket - line is going to be a note
+
+vi:
+enter - nothing happens
+space - nothing happens
+left bracket - is moving cursot to the beginning
+right bracket - is moving cursor to the end
+i - enables to edit text
+
+mcedit:
+colours of library - red, name of variables - yellow
+enter - text is moving one line down
+space - first line is moving rite
+backspace - first line is moving down (it depends in what line is cursor)
+
+geany:
+the same like mcedit, but:
+when I am typing only first letters of command: e.g. pr and I am pressing ctr+space then geany is helping me with command and suggest: printf
+
+jedit:
+the same like mcedit, but different colours
+
+3. diff command enables to see what are the differences in files
+how to type?
+diff name_of_file1 name_of_file2
+
+and:
+diff -y name_file1 name_file2
+it shows all lines of file 1 and 2, line by line:
+text line 1 file 1
+	text line 1 file 2
+text line 2 file 1
+	text line 2 file 2 etc.
+ 
+

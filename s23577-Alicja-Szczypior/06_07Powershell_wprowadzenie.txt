@@ -1,0 +1,62 @@
+2020.02.10.
+---------------------------
+PowerShell - wprowadzenie
+---------------------------
+
+1.
+We can run PowerShell on Windows in different ways:
+	a) start button, then type PowerShell -> run
+	b) start button, then type PowerShell ISE -> run
+	   ISE is more friendly to use
+	c) start button, then type PowerShell, right mouse button, open as an 		admine -> run
+	   now we can modify PS C:\Users\user> Set-ExecutionPlicy Bypass
+
+2.
+How to use help?
+Get-Help Get-ExecutionPolicy
+
+3. How to see examles of using a command?
+Get-Help Get-ExecutionPolicy -Examples
+
+4. Commands in PowerShell:
+verb-operate e.g. Set-ExecutionPolicy, Find-Module, Add-User, Create-Item
+
+5. How to show all available modules?
+Get-Module -ListAvailable
+"Where-Object" or its abbreviation "?" - to show modules with version more than 2.0
+| pipeline
+after | always $_ - when a list/collection/table is given
+Get-Module -ListAvailable | ? {$_.Version -ge "2.0.0.0"} -modules with version more than 2.2
+"While-Object" abbreviation "%" its a loop
+Get-Module -ListAvailable | ? {$_.Version -ge "2.0.0.0"} | % {Get-Command -Module $_.Name} -all cmdlet available in version more than 2.0
+Get-Module -ListAvailable | ? {$_.Version -ge "2.0.0.0"} | % {Get-Command -Module $_.Name} | ? {($_.Name -like "Add-*") -or ($_.Name -like "Get-*")} - with word add
+Out-GridView - to show it in new window
+#$nazwaPliku = "mojaNazwaPliku.txt" - saving in a file
+Out-Null - just to do
+
+6. Import-Module BitsTransfer - to manage with data
+alias: ipmo BitsTransfer
+
+all commands in this module: Get-Command -Module BitsTransfer
+
+7. Downloading pictures from websites:
+Start-BitsTransfer -Source link
+we can see what is the status:
+Get-BitsTransfer
+To complete job transfer:
+Complete-BitsTransfer -BitsJob $job
+To measure execution time:
+Measure-Command {Get-ChildItem -Path C:\Windows}
+To list files with delete time:
+ls C:\ | %{Sleep -Milliseconds 250; return $_} | Format-Table
+
+8. Call operator: "&" or "call"
+
+9. To show discs:
+Get-PSDrive
+
+10. To create a table:
+ls | %{ Get-ItemProperty $_.pspath | Select-Object DisplayName, InstallDate, UninstallString} | Format-Table -AutoSize
+TO UNINSTALL!!! & - this sign is important
+ls | %{ Get-ItemProperty $_.pspath | Select-Object DisplayName, InstallDate, UninstallString} | %{& $_.UninstallString}
+
